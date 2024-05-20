@@ -19,6 +19,32 @@ class _DashboardScreenState extends State<DashboardScreen> {
               Container(
                 color: Color.fromARGB(255, 1, 134, 243),
                 height: 100,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.all(8.0), // Add some padding if needed
+                    child: Row(
+                      children: const [
+                        CircleAvatar(
+                          radius: 30, // Adjust the radius as needed
+                          backgroundImage: AssetImage("assets/images/ngov.png"),
+                        ),
+                        SizedBox(
+                            width: 10), // Space between the image and the text
+                        Text(
+                          "Hello Sarkar!",
+                          style: TextStyle(
+                            color: Colors
+                                .white, // Text color to contrast with background
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
               SizedBox(
                 height: 30,
@@ -30,8 +56,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   child: Text(
                     "Menu",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 32, 146, 239)),
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 32, 146, 239),
+                    ),
                   ),
                 ),
               ),
@@ -60,8 +87,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   child: Text(
                     "Others",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 32, 146, 239)),
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 32, 146, 239),
+                    ),
                   ),
                 ),
               ),
@@ -89,7 +117,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Icons.dark_mode,
                   color: Color.fromARGB(255, 1, 134, 243),
                 ),
-                title: Text("Switch to to dark mode"),
+                title: Text("Switch to dark mode"),
               ),
             ],
           ),
@@ -99,6 +127,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
           iconTheme: const IconThemeData(
             color: Colors.white, // Change the drawer icon color to white
           ),
+          title: const Text(
+            "Dashboard",
+            style: TextStyle(
+              color: Colors.white, // Change the title color to white
+            ),
+          ),
+          centerTitle: true, // Center align the title
           actions: const [
             SizedBox(
               width: 20,
