@@ -13,7 +13,87 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return MaterialApp(
       theme: ThemeData.light(useMaterial3: true),
       home: Scaffold(
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: Column(
+            children: [
+              Container(
+                color: Color.fromARGB(255, 1, 134, 243),
+                height: 100,
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    "Menu",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 32, 146, 239)),
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.water_outlined,
+                  color: Color.fromARGB(255, 1, 134, 243),
+                ),
+                title: Text("Overview"),
+              ),
+              Divider(),
+              ListTile(
+                leading: Icon(
+                  Icons.pages,
+                  color: Color.fromARGB(255, 1, 134, 243),
+                ),
+                title: Text("Pages"),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    "Others",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 32, 146, 239)),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.settings_input_component,
+                  color: Color.fromARGB(255, 1, 134, 243),
+                ),
+                title: Text("Components"),
+              ),
+              Divider(),
+              ListTile(
+                leading: Icon(
+                  Icons.settings,
+                  color: Color.fromARGB(255, 1, 134, 243),
+                ),
+                title: Text("Settings"),
+              ),
+              Divider(),
+              ListTile(
+                leading: Icon(
+                  Icons.dark_mode,
+                  color: Color.fromARGB(255, 1, 134, 243),
+                ),
+                title: Text("Switch to to dark mode"),
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 1, 134, 243),
           iconTheme: const IconThemeData(
