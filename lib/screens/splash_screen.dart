@@ -20,13 +20,13 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void openDashboard() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
       return DashboardScreen();
     }));
   }
 
   void openLogin() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
       return LoginScreen();
     }));
   }
